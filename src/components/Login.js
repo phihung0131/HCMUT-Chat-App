@@ -28,7 +28,9 @@ function Login() {
         <button className="btn btn-primary" onClick={handleSignIn}>
           Đăng nhập với Google
         </button>
-        <p className="mt-3">Lưu ý: Chỉ cho phép đăng nhập bằng email @hcmut.edu.vn</p>
+        <p className="mt-3">
+          Lưu ý: Chỉ cho phép đăng nhập bằng email @hcmut.edu.vn
+        </p>
       </div>
     </div>
   );
