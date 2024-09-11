@@ -1,0 +1,44 @@
+@import "~bootstrap/scss/bootstrap";
+
+.chat-room-list {
+  padding: 20px;
+  background-color: #f8f9fa;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .room {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+
+    a {
+      text-decoration: none;
+      color: #007bff;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      &:hover {
+        background-color: #218838;
+      }
+    }
+
+    .interested {
+      background-color: #dc3545;
+      &:hover {
+        background-color: #c82333;
+      }
+    }
+  }
+}

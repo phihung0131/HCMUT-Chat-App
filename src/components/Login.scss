@@ -1,0 +1,21 @@
+@import "~bootstrap/scss/bootstrap";
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  button {
+    background-color: #4285f4;
+    color: white;
+    &:hover {
+      background-color: #357ae8;
+    }
+  }
+}
