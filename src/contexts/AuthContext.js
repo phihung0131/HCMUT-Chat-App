@@ -15,12 +15,8 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     const getSession = async () => {
       try {
-        const {
-          data: { session },
-          error,
-        } = await supabase.auth.getSession();
+        const { data: { session }, error } = await supabase.auth.getSession();
         if (error) throw error;
-        console.log("Session:", session); // Kiểm tra session
         setUser(session?.user ?? null);
       } catch (error) {
         console.error("Error fetching session:", error);
@@ -30,10 +26,9 @@ export function AuthProvider({ children }) {
     };
 
     getSession();
-
+    
     const { data: listener } = supabase.auth.onAuthStateChange(
       (event, session) => {
-        console.log("Auth state change:", event, session); // Kiểm tra sự thay đổi trạng thái
         setUser(session?.user ?? null);
         setLoading(false);
       }
@@ -44,10 +39,27 @@ export function AuthProvider({ children }) {
     };
   }, []);
 
+  const signIn = async (options) => {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      ...options,
+      options: {
+        ...options.options,
+        queryParams: {
+          ...options.options?.queryParams,
+          hd: 'hcmut.edu.vn'
+        }
+      }
+    });
+    
+    if (error) throw error;
+    return data;
+  };
+
+  const signOut = () => supabase.auth.signOut();
+
   const value = {
-    signUp: (data) => supabase.auth.signUp(data),
-    signIn: (data) => supabase.auth.signInWithOAuth(data), // Cập nhật phương thức signIn
-    signOut: () => supabase.auth.signOut(),
+    signIn,
+    signOut,
     user,
   };
 
