@@ -97,18 +97,23 @@ function ChatRoom() {
   }
 
   return (
-    <div className="chat-room">
-      <header>
-        <button onClick={handleBack}>← Back</button>
+    <div className="chat-room d-flex flex-column vh-100">
+      <header className="chat-header">
+        <button className="btn btn-secondary" onClick={handleBack}>
+          ← Back
+        </button>
         <h2>{roomName}</h2>
       </header>
-      <div className="messages-container">
+      <div className="messages-container flex-grow-1 overflow-auto">
         {messages.map((message) => (
-          <div key={message.id} className="message">
-            <p className="message-content">{message.content}</p>
-            <small className="message-timestamp">
-              {new Date(message.created_at).toLocaleString()}
-            </small>
+          <div key={message.id} className="message d-flex align-items-center">
+            <img src="https://demoda.vn/wp-content/uploads/2023/01/hinh-avatar-cute-dang-yeu-ba-dao.jpg" alt="Avatar" className="avatar" />
+            <div>
+              <p className="message-content">{message.content}</p>
+              <small className="message-timestamp">
+                {new Date(message.created_at).toLocaleString()}
+              </small>
+            </div>
           </div>
         ))}
         <div ref={messagesEndRef} />
@@ -119,8 +124,11 @@ function ChatRoom() {
           value={newMessage}
           onChange={(e) => setNewMessage(e.target.value)}
           placeholder="Type a message..."
+          className="form-control"
         />
-        <button type="submit">Send</button>
+        <button type="submit" className="btn btn-primary">
+          Send
+        </button>
       </form>
     </div>
   );

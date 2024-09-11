@@ -1,51 +1,50 @@
 @import "~bootstrap/scss/bootstrap";
 
 .chat-room {
-  padding: 20px;
-  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 
-  header {
+  .chat-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-
-    button {
-      background-color: transparent;
-      border: none;
-      color: white;
-      font-size: 1.2rem;
-      &:hover {
-        color: #d4d4d4;
-      }
-    }
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
 
     h2 {
       margin: 0;
     }
+
+    .btn {
+      margin-right: 10px;
+    }
   }
 
   .messages-container {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #ffffff;
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-    max-height: 400px;
-    overflow-y: auto;
-
     .message {
-      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      padding: 5px;
 
-      .message-content {
-        margin: 0;
+      .avatar {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        border-radius: 5px; // Không tròn
+        align-items: center;
       }
 
+      .message-content {
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        margin: 0px;
+      }      
+
       .message-timestamp {
-        font-size: 0.8rem;
+        font-size: 0.8em;
         color: #6c757d;
       }
     }
@@ -53,24 +52,17 @@
 
   .message-form {
     display: flex;
-    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
 
-    input {
+    .form-control {
       flex: 1;
-      padding: 10px;
-      border: 1px solid #dee2e6;
-      border-radius: 5px 0 0 5px;
+      margin-right: 10px;
     }
 
-    button {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 0 5px 5px 0;
-      &:hover {
-        background-color: #0056b3;
-      }
+    .btn {
+      flex-shrink: 0;
     }
   }
 }
