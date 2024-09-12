@@ -6,6 +6,12 @@
   align-items: center;
   height: 100vh;
   background-color: #f8f9fa;
+  padding: 20px;
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+  }
 
   h2 {
     margin-bottom: 20px;
@@ -14,6 +20,7 @@
   button {
     background-color: #4285f4;
     color: white;
+    transition: background-color 0.3s ease;
     &:hover {
       background-color: #357ae8;
     }
