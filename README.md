@@ -49,7 +49,7 @@ src/
 
 1. **Clone the repository**:
    ```bash
-   git clone [your-repo-url]
+   git clone https://github.com/phihung0131/HCMUT-Chat-App
    ```
 
 2. **Install dependencies**:
