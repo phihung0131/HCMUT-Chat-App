@@ -1,71 +1,70 @@
-# Demo: https://hcmut-chat-app.vercel.app/
-# Getting Started with Create React App
+# HCMUT Chat Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A real-time chat application built with React and SupaBase, designed for students at Ho Chi Minh City University of Technology (HCMUT) to communicate effortlessly in various chat rooms.
 
-## Available Scripts
+[Live Demo](https://hcmut-chat-app.vercel.app/login)
 
-In the project directory, you can run:
+## 📱 Preview
 
-### `npm start`
+*Include screenshots here to showcase key features:*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Login Screen**
+- **Chat Room List**
+- **Message Input Interface**
+![Login Screen](preview/pre2.png)
+![Chat Room List 1](preview/pre1.png)
+![Chat Room List 2](preview/pre4.png)
+![Message Input Interface](preview/pre3.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Features
 
-### `npm test`
+- **Authentication**: Secure login for HCMUT students.
+- **Real-time Chat**: Instant message updates powered by Firebase.
+- **Multiple Chat Rooms**: Create and join different chat rooms for focused discussions.
+- **Responsive Design**: Optimized for seamless use on both desktop and mobile devices.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Technologies Used
 
-### `npm run build`
+- **React.js**: Frontend framework for building interactive UIs.
+- **SupaBase**: Realtime Database & Authentication.
+- **SCSS**: For organized, responsive styling.
+- **Context API**: State management across the application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🏗️ Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+src/
+├── components/           # React components
+│   ├── ChatRoom/         # Components related to chat rooms
+│   ├── Login/            # Authentication components
+│   └── RoomList/         # Chat room list components
+├── contexts/             # Context API for global state
+├── hooks/                # Custom React hooks
+└── App.js                # Main application component
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚙️ Installation
 
-### `npm run eject`
+1. **Clone the repository**:
+   ```bash
+   git clone [your-repo-url]
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Start the development server**:
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🔄 Available Scripts
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `npm start`: Runs the app in development mode.
+- `npm test`: Launches the test runner.
+- `npm run build`: Builds the app for production.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

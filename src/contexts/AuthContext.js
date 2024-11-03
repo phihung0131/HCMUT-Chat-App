@@ -15,7 +15,10 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     const getSession = async () => {
       try {
-        const { data: { session }, error } = await supabase.auth.getSession();
+        const {
+          data: { session },
+          error,
+        } = await supabase.auth.getSession();
         if (error) throw error;
         setUser(session?.user ?? null);
       } catch (error) {
@@ -26,7 +29,7 @@ export function AuthProvider({ children }) {
     };
 
     getSession();
-    
+
     const { data: listener } = supabase.auth.onAuthStateChange(
       (event, session) => {
         setUser(session?.user ?? null);
@@ -46,11 +49,11 @@ export function AuthProvider({ children }) {
         ...options.options,
         queryParams: {
           ...options.options?.queryParams,
-          hd: 'hcmut.edu.vn'
-        }
-      }
+          hd: "hcmut.edu.vn",
+        },
+      },
     });
-    
+
     if (error) throw error;
     return data;
   };
