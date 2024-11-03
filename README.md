@@ -12,7 +12,7 @@ A real-time chat application built with React and SupaBase, designed for student
 ![Login Screen](preview/pre2.png)
 
 ### Chat Room List
-![Chat Room List 1](preview/pre1.png)
+![Chat Room List1](preview/pre1.png)
 ![Chat Room List 2](preview/pre4.png)
 
 ### Message Input Interface
